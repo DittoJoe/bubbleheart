@@ -5,12 +5,12 @@ class Shop < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   has_many_attached :photos
   validates :name, presence: true
-  include PgSearch::Model
-  pg_search_scope :search_by_name_and_details,
-    against: [:name, :address, :details],
-    using: {
-      tsearch: { prefix: true }
-    }
+  # include PgSearch::Model
+  # pg_search_scope :search_by_name_and_details,
+  #   against: [:name, :address, :details],
+  #   using: {
+  #     tsearch: { prefix: true }
+  #   }
   def set_rating
     reviews = self.reviews
     total = 0
