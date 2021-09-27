@@ -1,6 +1,18 @@
 .avatar {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
+  background-color: $cream;
+  position: relative;
+  i {
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $purple;
+    font-size: 24px;
+  }
 }
 .avatar-large {
   width: 56px;
