@@ -33,7 +33,9 @@
         </li>
       <% end %>
       <div class="avatar">
-        <i class="far fa-heart"></i>
+        <%= link_to new_user_session_path do %>
+          <%= far_icon "heart" %>
+        <% end %>
       </div>
     </ul>
   </div>
