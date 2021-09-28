@@ -11,3 +11,22 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: $cream;
+  font-family: 'Comfortaa', cursive;
+}
+
+i {
+  color: $cream;
+}

@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+  background-color: $purple;
+  font-size: 22px;
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-socials {
+  margin-left: 16px;
+}
+
+.footer-copyright :hover {
+  color: $purple;
+}
+
+#footer-right {
+  margin-bottom: 0;
+  margin-right: 16px;
+  color: $cream;
+}
