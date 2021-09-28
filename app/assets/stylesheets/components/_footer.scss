@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   background-color: $purple;
-  font-size: 22px;
+  font-size: 16px;
   margin-top: auto;
   position: fixed;
   bottom: 0;
@@ -9,13 +9,17 @@
 
 .footer-socials {
   margin-left: 16px;
+  font-size: 24px;
+  i {
+    padding: 0 8px;
+  }
 }
 
-.footer-copyright :hover {
-  color: $purple;
+.footer-socials :hover {
+  color: $lavender;
 }
 
-#footer-right {
+#footer-left {
   margin-bottom: 0;
   margin-right: 16px;
   color: $cream;
