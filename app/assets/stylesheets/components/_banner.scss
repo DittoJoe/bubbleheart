@@ -4,16 +4,18 @@
   padding: 150px 0;
   width: 100%;
   height: 100%;
+  // display: flex;
+  // align-items: space-around;
   h1 {
     margin: 0;
     color: $cream;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
+    font-size: 48px;
     font-weight: bold;
     font-family: 'Comfortaa', cursive;
   }
   p {
-    font-size: 20px;
+    font-size: 32px;
     color: $cream;
     opacity: .8;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);

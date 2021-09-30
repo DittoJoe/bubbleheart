@@ -1,24 +1,22 @@
-.navbar-lewagon {
+.navbar-bubble {
   justify-content: space-between;
   background: $purple;
-  padding-bottom: 0;
-  padding-top: 0;
-  padding-left: 8px;
+  padding: 0 24px;
   height: 8%;
 }
 
-.navbar-lewagon h1 {
+.navbar-bubble h1 {
   font-family: 'Comfortaa', cursive;
   color: $cream;
   font-size: 52px;
   margin-bottom: 0;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-bubble .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-bubble .navbar-brand img {
   width: 40px;
 }
 
@@ -38,7 +36,7 @@
 }
 
 @media(max-width: 768px) {
-  .navbar-lewagon h1 {
+  .navbar-bubble h1 {
     font-size: 26px;
   }
 }
