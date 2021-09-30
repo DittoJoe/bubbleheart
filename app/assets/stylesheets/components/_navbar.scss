@@ -35,8 +35,17 @@
  border-color: $cream;
 }
 
+.navbar-mobile {
+  position: fixed;
+  bottom: 0;
+}
+
 @media(max-width: 768px) {
-  .navbar-bubble h1 {
-    font-size: 26px;
+  .navbar-bubble {
+    justify-content: center;
+  }
+
+  .footer {
+    display: none !important;
   }
 }
