@@ -36,3 +36,9 @@ i {
     display: none !important;
   }
 }
+
+@media(min-width: 768px) {
+  .desktop-hide {
+    display: none !important;
+  }
+}
