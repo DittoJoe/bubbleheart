@@ -1,22 +1,22 @@
-.navbar-bubble {
+.navbar {
   justify-content: space-between;
   background: $purple;
   padding: 0 24px;
   height: 8%;
 }
 
-.navbar-bubble h1 {
+.navbar h1 {
   font-family: 'Comfortaa', cursive;
   color: $cream;
   font-size: 52px;
   margin-bottom: 0;
 }
 
-.navbar-bubble .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-bubble .navbar-brand img {
+.navbar .navbar-brand img {
   width: 40px;
 }
 
