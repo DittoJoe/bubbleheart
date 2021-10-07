@@ -1,19 +1,32 @@
 <div class="navbar navbar-mobile desktop-hide">
-  <div class="avatar">
-    <%= link_to new_user_session_path do %>
-      <%= far_icon "heart" %>
-    <% end %>
-  </div>
-  <div class="avatar">
-    <div id="store">
-    <%= link_to new_user_session_path do %>
-      <%= far_icon "store" %>
-    <% end %>
+  <div class="footer-buttons">
+    <div class="footer-icon">
+      <div class="avatar">
+        <%= link_to new_user_session_path do %>
+          <%= far_icon "calendar-plus" %>
+        <% end %>
+      </div>
     </div>
+    <p class="footer-text">Add new</p>
   </div>
-  <div class="avatar">
-    <%= link_to new_user_session_path do %>
-      <%= far_icon "plus" %>
-    <% end %>
+  <div class="footer-buttons">
+    <div class="footer-icon">
+      <div class="avatar">
+        <%= link_to new_user_session_path do %>
+          <%= far_icon "heart" %>
+        <% end %>
+        </div>
+      </div>
+    <p class="footer-text">My hearts</p>
+  </div>
+  <div class="footer-buttons">
+    <div class="footer-icon">
+      <div class="avatar">
+        <%= link_to new_user_session_path do %>
+          <%= far_icon "eye" %>
+        <% end %>
+      </div>
+    </div>
+    <p class="footer-text">Explore</p>
   </div>
 </div>

@@ -27,6 +27,12 @@
   transition: background 0.3s ease;
 }
 
+.home-buttons {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
 @media(max-width: 768px) {
   .banner {
     height: 80%;
@@ -36,5 +42,8 @@
     p {
       font-size: 16px;
     }
+  }
+  .home-buttons {
+    display: block;
   }
 }
