@@ -8,7 +8,7 @@
 .navbar h1 {
   font-family: 'Comfortaa', cursive;
   color: $cream;
-  font-size: 52px;
+  font-size: 5vh;
   margin-bottom: 0;
 }
 
@@ -24,7 +24,7 @@
 .navbar-light .navbar-nav .nav-link {
   color: $cream;
   margin-right: 22px;
-  font-size: 18px;
+  font-size: 2vh;
   transition: 300ms;
   border-bottom: 1px solid transparent;
 }
@@ -54,8 +54,9 @@
 
 .footer-text {
   margin-top: 8px;
+  margin-bottom: 0;
   color: $cream;
-  font-size: 10px;
+  font-size: 1.4vh;
   text-align: center;
 }
 
