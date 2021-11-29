@@ -1,5 +1,5 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= image_path "bubblet.jpg" %>);">
-  <div id="create" class="container create-form col-8 col-offset-5 py-5 px-5">
+  <div id="create" class="container create-form col-10 col-offset-3 py-3 px-4">
     <div id="create-form">
       <h2>Log in</h2>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -14,7 +14,7 @@
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
         <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
+          <%= f.submit 'Log in', :class => 'btn-form' %>
         </div>
       <% end %>
       <%= render "devise/shared/links" %>

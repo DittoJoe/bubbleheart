@@ -1,0 +1,37 @@
+.btn-city {
+  color: $cream;
+  border-radius: 8px;
+  background: $purple;
+  transition: background 0.3s ease;
+}
+
+.btn-form {
+  width: 100%;
+  color: $cream;
+  background-color: $lavender;
+  appearance: auto;
+  text-align: center;
+  padding: 1vh 2vh;
+  margin-bottom: 3vh;
+  border-width: 0;
+  border-radius: 4px;
+}
+
+.home-buttons {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+@media(max-width: 768px) {
+  .banner {
+    height: 80%;
+  }
+  .home-buttons {
+    display: block;
+  }
+  .btn-city {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
