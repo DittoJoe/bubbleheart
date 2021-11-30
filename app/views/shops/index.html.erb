@@ -1,0 +1,32 @@
+<div class="show-container">
+  <div class="container">
+    <div class="srch">
+      <%= render 'shared/search' %>
+      <div class="search-bar"></div>
+    </div>
+    <div class="cards-index">
+      <% @shops.each do |shop| %>
+        <%= link_to shop_path(shop) do %>
+          <div class="card-shop">
+            <% if shop.photos.attached? %>
+              <%= cl_image_tag shop.photos.first.key %>
+            <% else %>
+              <%= image_tag "https://icon-library.net/images/free-bike-icon/free-bike-icon-8.jpg" %>
+            <% end %>
+              <div class="card-shop-infos">
+                <% shop.set_rating %>
+                <% @rating = shop.rating %>
+                <%= render 'rating' %>
+                <h2><%= shop.name %></h2>
+              </div>
+           </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
