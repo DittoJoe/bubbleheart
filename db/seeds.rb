@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
+require 'dotenv'
 
 puts "Initializing..."
 
@@ -20,9 +21,9 @@ Review.destroy_all
 
 puts "Creating users..."
 
-User.create(email: 'info@bubblehe.art', password: 'Bh0121Ad!', username: 'bubbleheart')
-User.create(email: 'joseph.jf.rohde@gmail.com', password: 'JR9021Bh!', username: 'DittoJoe')
-User.create(email: 'test@bubblehe.art', password: '123456', username: 'Test1')
+User.create(email: 'info@bubblehe.art', password: ENV['ADMIN_PASSWORD'], username: 'bubbleheart', admin: true)
+User.create(email: 'joseph.jf.rohde@gmail.com', password: ENV['USER_PASSWORD'], username: 'DittoJoe', admin: false)
+User.create(email: 'test@bubblehe.art', password: '123456', username: 'Test1', admin: false)
 
 puts "Creating shops..."
 
