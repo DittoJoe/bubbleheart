@@ -66,4 +66,4 @@ gem 'pundit'
 gem 'geocoder'
 # gem 'font-awesome-rails'
 gem 'fontawesome5-rails'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'

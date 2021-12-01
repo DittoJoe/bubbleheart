@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_145754) do
+ActiveRecord::Schema.define(version: 2021_12_01_143442) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(version: 2021_11_30_145754) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "bookmarks", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "shop_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["shop_id"], name: "index_bookmarks_on_shop_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.text "content"
     t.integer "rating"
@@ -56,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_11_30_145754) do
     t.float "longitude"
     t.float "rating"
     t.string "key"
+    t.text "details"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,11 +76,15 @@ ActiveRecord::Schema.define(version: 2021_11_30_145754) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookmarks", "shops"
+  add_foreign_key "bookmarks", "users"
   add_foreign_key "reviews", "shops"
   add_foreign_key "reviews", "users"
 end
