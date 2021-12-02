@@ -103,7 +103,8 @@
 .card-shop {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  border: 1px solid $lavender;
 }
 
 .card-shop > img {
@@ -124,6 +125,8 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  background-color: $purple;
+  color: $cream;
 }
 
 .card-shop-infos .card-trip-user {
