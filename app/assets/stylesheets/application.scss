@@ -43,10 +43,23 @@ a:hover {
   .mobile-hide {
     display: none !important;
   }
+
+  .cards-index {
+    grid-template-columns: 1fr;
+  }
+
+  .show-container {
+    margin: 0;
+  }
+
 }
 
 @media(min-width: 769px) {
   .desktop-hide {
     display: none !important;
+  }
+
+  .cards-index {
+    grid-template-columns: 1fr 1fr;
   }
 }
