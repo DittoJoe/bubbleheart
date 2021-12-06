@@ -22,7 +22,7 @@
 
         <div class="form-actions">
           <%= f.submit 'Sign up', :class => 'btn-form' %>
-          <%= render "devise/shared/links" %>
+          <%= link_to "Log in", new_session_path(resource_name), :class => 'btn-form text-decoration-none' %><br />
         </div>
       <% end %>
     </div>
