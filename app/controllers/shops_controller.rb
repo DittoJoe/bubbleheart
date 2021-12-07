@@ -1,11 +1,10 @@
 class ShopsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @shops = policy_scope(Shop)
     @shops = Shop.all
     @shops.each do |shop|
-      shop.set_rating
     end
     @markers = @shops.geocoded.map do |shop|
       {
@@ -33,6 +32,7 @@ class ShopsController < ApplicationController
   end
 
   def show
+    @shops = policy_scope(Shop)
     @review = Review.new
     @shop = Shop.find(params[:id])
     @reviews = @shop.reviews
@@ -81,6 +81,7 @@ class ShopsController < ApplicationController
 
   def is_favorite?(id)
     @user = current_user
+    return false if @user == nil
     @bookmark = @user.bookmarks.where(:shop_id => id).last
     return @bookmark.present?
   end

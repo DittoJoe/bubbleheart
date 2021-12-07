@@ -1,0 +1,72 @@
+<div class="container text-center pt-3">
+  <h1><%= @shop.name %></h1>
+</div>
+  <div class="show-container">
+    <div>
+    <div class="card-show">
+      <% if @shop.photos.attached? %>
+        <%= cl_image_tag @shop.photos.first.key %>
+      <% else %>
+        <%= cl_image_tag @shop.key %>
+      <% end %>
+      <div class="card-show-infos">
+        <div data-controller="like" data-like-target="link" data-shop="<%= @shop.id %>" data-bookmark="<%= Bookmark.find_by(user: current_user, shop: @shop).id if Bookmark.find_by(user: current_user, shop: @shop)%>">
+          <% unless @favorite %>
+              <i class="far fa-heart empty-heart" data-action="click->like#create"></i>
+          <% else %>
+              <i class="fas fa-heart full-heart" data-action="click->like#delete"  data-bookmark="<%= @bookmark.id %>"></i>
+          <% end %>
+        </div>
+        <% @rating = @shop.rating %>
+        <%= render 'rating' %>
+        <div>
+          <h3><%= @shop.details %></h3>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Add a review</button>
+          <%= render 'reviews/modal' %>
+        </div>
+      </div>
+    </div>
+    <div class="review-container">
+      <h1>Reviews</h1>
+      <% @reviews.reverse.each do |review| %>
+        <div class="card-review">
+          <div class="review-rating">
+            <i class="fas fa-star"></i>
+            <% @rating = review.rating %>
+            <% if @rating < 1.5 %>
+              <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+            <% elsif @rating < 2.5 %>
+              <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+            <% elsif @rating < 3.5 %>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+            <% elsif @rating < 4.5 %>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            <% elsif @rating == 5.0 %>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <% else %>
+              <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+            <% end %>
+          </div>
+          <div class="avatar-img">
+            <% if review.user.avatar.attached? %>
+              <%= cl_image_tag review.user.avatar.key, class: "avatar-review" %>
+            <% else %>
+              <%= image_tag "https://i.pravatar.cc/150?img=13", class: "avatar-review" %>
+            <% end %>
+          </div>
+          <div class="card-review-text">
+            <span id="review-name"> <%= review.user.first_name.capitalize %> <%= review.user.last_name.capitalize %> </span>
+            <span id="review-time"> <%= review.created_at.strftime("%a %b %e") %> </span>
+            <p> <%= review.content %> </p>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+  <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
