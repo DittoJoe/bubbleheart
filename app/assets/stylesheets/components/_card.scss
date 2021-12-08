@@ -10,8 +10,9 @@
 .card-show {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 600px;
+  border-radius: 8px;
+  border: 1px solid $lavender;
 }
 
 .card-show > img {
@@ -29,7 +30,8 @@
 .card-show h3 {
   font-size: 24px;
   margin: 16px 0;
-  font-family: 'Overlock', cursive;
+  font-family: 'Comfortaa', cursive;
+  color: $cream;
 }
 
 .card-show p {
@@ -39,10 +41,11 @@
 }
 
 .card-show .card-show-infos {
-  padding: 16px;
+  padding: 16px 16px 0 16px;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  background-color: $purple;
 }
 
 .card-show-infos .card-show-user {
@@ -59,15 +62,15 @@
   font-size: 16px!important;
 }
 
-// .fa-heart {
-//   color: #c34535;
-//   position: absolute;
-//   right: 8px;
-//   top: -240px;
-//   width: 40px;
-//   font-size: 24px;
-//   -webkit-text-stroke: .3px #c34535;
-// }
+.favorite {
+  color: $purple;
+  position: absolute;
+  right: 8px;
+  top: -240px;
+  width: 40px;
+  font-size: 24px;
+  -webkit-text-stroke: .3px #c34535;
+}
 
 .fav-shop .heart {
  color: #c34535;

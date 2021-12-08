@@ -8,7 +8,8 @@
   margin-left: 16px;
   height: 100vh;
   position: sticky;
-  top: 20px;
+  border-radius: 8px;
+  border: 1px solid $lavender;
 }
 
 .mapboxgl-popup {
@@ -52,4 +53,66 @@
 
 .mapboxgl-popup-close-button {
   color: $cream;
+}
+
+.review-container {
+  margin-top: 24px;
+  border: 1px solid $lavender;
+  margin-bottom: 60px;
+  padding: 8px;
+  background-color: white;
+  overflow: scroll;
+  max-height: 430px;
+  border-radius: 8px;
+}
+
+.review-container h1 {
+  margin: 16px 16px;
+  font-size: 22px;
+  font-weight: normal;
+  color: $black;
+}
+
+.card-review {
+  display: flex;
+  margin-top: 32px;
+  position: relative;
+}
+
+.card-review p {
+  margin-left: 24px;
+  margin-top: 4px;
+  margin-right: 24px;
+  font-size: 16px;
+  color: darkgrey;
+}
+
+#review-time {
+  color: lightgrey;
+  font-size: 12px;
+  margin-left: 8px;
+  font-weight: lighter;
+}
+
+.avatar-review{
+  border-radius: 50%;
+  width: 56px;
+  margin-left: 8px;
+}
+
+#review-name {
+  margin-left: 24px;
+}
+
+.review-rating {
+  display: flex;
+  position: absolute;
+  left: 380px;
+  width: 240px;
+  font-size: 24px;
+  i {
+    margin: 0 4px;
+    color: $yellow;
+     -webkit-text-stroke: .3px $yellow;
+  }
 }

@@ -12,16 +12,16 @@
       <div class="card-show-infos">
         <div data-controller="like" data-like-target="link" data-shop="<%= @shop.id %>" data-bookmark="<%= Bookmark.find_by(user: current_user, shop: @shop).id if Bookmark.find_by(user: current_user, shop: @shop)%>">
           <% unless @favorite %>
-              <i class="far fa-heart empty-heart" data-action="click->like#create"></i>
+              <i class="far fa-heart empty-heart favorite" data-action="click->like#create"></i>
           <% else %>
-              <i class="fas fa-heart full-heart" data-action="click->like#delete"  data-bookmark="<%= @bookmark.id %>"></i>
+              <i class="fas fa-heart full-heart favorite" data-action="click->like#delete"  data-bookmark="<%= @bookmark.id %>"></i>
           <% end %>
         </div>
         <% @rating = @shop.rating %>
         <%= render 'rating' %>
         <div>
           <h3><%= @shop.details %></h3>
-          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Add a review</button>
+          <button type="button" class="btn btn-form" data-toggle="modal" data-target="#exampleModal">Add a review</button>
           <%= render 'reviews/modal' %>
         </div>
       </div>
