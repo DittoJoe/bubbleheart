@@ -55,12 +55,11 @@
             <% end %>
           </div>
           <div class="card-review-text">
-            <span id="review-name"> <%= review.user.first_name.capitalize %> <%= review.user.last_name.capitalize %> </span>
-            <span id="review-time"> <%= review.created_at.strftime("%a %b %e") %> </span>
-            <p> <%= review.content %> </p>
+            <span id="review-name"><%= review.user.username %></span>
+            <span id="review-time"><%= review.created_at.strftime("%a %b %e") %></span>
+            <p><%= review.content %></p>
           </div>
         </div>
-
       <% end %>
     </div>
   </div>

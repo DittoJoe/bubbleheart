@@ -10,7 +10,8 @@ class ReviewsController < ApplicationController
     @shop = Shop.find(params[:shop_id])
     @review.shop = @shop
     @review.user = current_user
-    @shop.get_rating
+    authorize @review
+    @shop.set_rating
     @review.save
     redirect_to shop_path(@shop)
   end
