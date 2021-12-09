@@ -28,11 +28,11 @@ import "bootstrap";
 
 // Internal imports
 import { initMapbox } from '../plugins/init_mapbox';
-// import { initStarRating } from '../plugins/init_star_rating';
+import { initStarRating } from '../plugins/init_star_rating';
 // import { initAutocomplete } from '../plugins/init_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
-  // initStarRating();
+  initStarRating();
   // initAutocomplete();
 })

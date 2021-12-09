@@ -11,7 +11,7 @@
         <%= simple_form_for [@shop, @review] do |f| %>
           <%= f.input :rating, collection: (1..5).to_a, label:false %>
           <%= f.input :content, label: "My review:" %>
-          <%= f.submit "Submit", class: "btn btn-success w-100" %>
+          <%= f.submit "Submit", class: "btn btn-form w-100" %>
         <% end %>
       </div>
     </div>

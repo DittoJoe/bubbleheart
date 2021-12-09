@@ -37,16 +37,32 @@
   justify-content: center;
 }
 
+.modal-content {
+  border-radius: 8px;
+}
+
 .modal-backdrop {
   opacity: 0.6 !important;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-body {
+  padding-bottom: 0;
 }
 
 .br-theme-css-stars .br-widget a {
   font-size: 24px !important;
 }
 
+.br-theme-fontawesome-stars-o .br-widget a.br-active:after {
+    color: #555;
+}
+
 .br-theme-css-stars .br-widget a.br-selected::after {
-  color: $yellow !important;
+  color: $purple !important;
 }
 
 label {
