@@ -52,10 +52,12 @@ class ShopsController < ApplicationController
 
   def new
     @shop = Shop.new
+    authorize @shop
   end
 
   def create
     @shop = Shop.new(shop_params)
+    authorize @shop
     if @shop.save
       redirect_to shop_path(@shop)
     else
@@ -65,10 +67,12 @@ class ShopsController < ApplicationController
 
   def edit
     @shop = Shop.find(params[:id])
+    authorize @shop
   end
 
   def update
     @shop = Shop.find(params[:id])
+    authorize @shop
     @shop.update(shop_params)
     redirect_to shop_path(@shop)
   end

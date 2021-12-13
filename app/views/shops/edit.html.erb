@@ -1,0 +1,14 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url( <%= image_path "bubblet.jpg" %>);">
+  <div id="create" class="container create-form col-10 col-offset-3 py-3 px-4">
+    <div id="create-form">
+      <h2 id="form-title">Edit shop</h2>
+      <%= simple_form_for(@shop) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :details %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit class: "btn btn-form w-100" %>
+      <% end %>
+    </div>
+  </div>
+</div>

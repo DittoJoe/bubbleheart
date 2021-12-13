@@ -7,7 +7,7 @@
       <% if @shop.photos.attached? %>
         <%= cl_image_tag @shop.photos.first.key %>
       <% else %>
-        <%= cl_image_tag @shop.key %>
+        <%= image_tag "bubblet.jpg" %>
       <% end %>
       <div class="card-show-infos">
         <div data-controller="like" data-like-target="link" data-shop="<%= @shop.id %>" data-bookmark="<%= Bookmark.find_by(user: current_user, shop: @shop).id if Bookmark.find_by(user: current_user, shop: @shop)%>">
